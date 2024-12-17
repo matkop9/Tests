@@ -29,8 +29,8 @@ const randomEmail  = `${randomFullName.replace(' ', '')}${faker.number.int(1000)
   await page.screenshot({path: 'screenshots/formLayoutsPage.png'})
   await pm.onFormLayoutPage().submitInlineFormWithNameEmailAndCheckbox(randomFullName,randomEmail, false)
   await page.locator("nb-card", {hasText: "Using the Grid"}).screenshot({path:'screenshots/inlineForm.png'})
-  // await pm.navigateTo().datePickerPage()
-  // // await onDatePickerPage.selectCommonDatePickerDateFromToday(1)
-  // await pm.onDatepickerPage().selectDatepickerWithRangeFromToday(2,15)
+  await pm.navigateTo().datePickerPage()
+  // await pm.onDatepickerPage().selectCommonDatePickerDateFromToday(1)
+  await pm.onDatepickerPage().selectDatepickerWithRangeFromToday(2,15)
 });
 
